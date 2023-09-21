@@ -31,18 +31,34 @@ const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=`
 
 let moviesObj = {} 
 
-function createCard(moviesObj) {
+function createCard(movie) {
     // create card element for search result
     const movieCardDiv = document.createElement('div');
     movieCardDiv.className = 'movie-card';
+
     const img = document.createElement('img');
-    img.setAttribute('src', moviesObj.Poster);
+    img.className = 'card-img'
+    img.setAttribute('src', movie.Poster);
+
+    const title = document.createElement('h3');
+    title.innerHTML = movie.Title;
+
+    const year = document.createElement('h3');
+    year.innerHTML = movie.Year;
+
     movieCardDiv.appendChild(img);
+    movieCardDiv.appendChild(title);
+    movieCardDiv.appendChild(year);
+
+    //setup movieCardDiv dataset for saving the movie info
+    movieCardDiv.setAttribute('data-title', movie.Title);
+    movieCardDiv.setAttribute('data-Year', movie.Year);
+    movieCardDiv.setAttribute('data-imdbID', movie.imdbID);
+
     return movieCardDiv;
 }
 // edited so that both search bars now search 
 function searchMovies(event) {
-    console.log(event.code);
     if (event.code === 'Enter') { // input search enter key press
         const searchInput = event.target; // Get the current search input element
 
@@ -77,7 +93,7 @@ function searchMovies(event) {
 function showDivIndex(display) {
     const divIndex = document.getElementById('index');
     if (display) {
-        divIndex.style.display = 'block';
+        divIndex.style.display = 'inline';
     } else {
         divIndex.style.display = 'none';
     }
@@ -86,7 +102,7 @@ function showDivIndex(display) {
 function showDivMovies(display) {
     const divMovies = document.getElementById('movies');
     if (display) {
-        divMovies.style.display = 'block';
+        divMovies.style.display = 'flex';
     } else {
         divMovies.style.display = 'none';
     }
@@ -95,7 +111,7 @@ function showDivMovies(display) {
 function showDivMovieDetail(display) {
     const divMovieDetail = document.getElementById('movie-detail');
     if (display) {
-        divMovieDetail.style.display = 'block';
+        divMovieDetail.style.display = 'inline';
     } else {
         divMovieDetail.style.display = 'none';
     }
