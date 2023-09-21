@@ -40,7 +40,7 @@ function createCard(moviesObj) {
     movieCardDiv.appendChild(img);
     return movieCardDiv;
 }
-
+// edited so that both search bars now search 
 function searchMovies(event) {
     console.log(event.code);
     if (event.code === 'Enter') { // input search enter key press
@@ -106,3 +106,6 @@ searchInput.addEventListener('keydown', searchMovies)
 
 const searchInput2 = document.getElementById('search-input2');
 searchInput2.addEventListener('keydown', searchMovies)
+
+const searchInputAbout = document.getElementById('search-input-about');
+searchInputAbout.addEventListener('keydown', searchMovies)
