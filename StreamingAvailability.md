@@ -1,0 +1,7017 @@
+# Streaming Availability API call sample
+
+## sample call by imdb id
+```
+const url = 'https://streaming-availability.p.rapidapi.com/get?output_language=en&imdb_id=tt0120338';
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': '48c008f518msh3634cbf6badb95dp117425jsn94e94c124522',
+		'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+	}
+};
+
+try {
+	const response = await fetch(url, options);
+	const result = await response.text();
+	console.log(result);
+} catch (error) {
+	console.error(error);
+}
+```
+
+## sample output
+```
+{
+  "result": {
+    "type": "movie",
+    "title": "Titanic",
+    "streamingInfo": {
+      "at": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1689865601
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1689865601
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1689865601
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1689865601
+        }
+      ],
+      "au": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "12.99",
+            "currency": "AUD",
+            "formatted": "12.99 AUD"
+          },
+          "availableSince": 1689795431
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "11.99",
+            "currency": "AUD",
+            "formatted": "11.99 AUD"
+          },
+          "availableSince": 1689795431
+        }
+      ],
+      "be": [
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1691325758
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1691325758
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "4.99",
+            "currency": "EUR",
+            "formatted": "4.99 EUR"
+          },
+          "availableSince": 1691325758
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "4.99",
+            "currency": "EUR",
+            "formatted": "4.99 EUR"
+          },
+          "availableSince": 1691325758
+        },
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "ca": [
+        {
+          "service": "paramount",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.paramountplus.com/movies/video/6vaLiEeiBmJ5XgLsxBKi_v2L4INgqR92/",
+          "audios": [
+            {
+              "language": "eng",
+              "region": "USA"
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": "USA"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "leaving": 1703912400,
+          "availableSince": 1684418853
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0J819P1SSRGM411IZOUD156G7Q/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "14.99",
+            "currency": "CAD",
+            "formatted": "14.99 CAD"
+          },
+          "availableSince": 1689944868
+        },
+        {
+          "service": "netflix",
+          "streamingType": "subscription",
+          "link": "https://www.netflix.com/title/1181461/",
+          "audios": [],
+          "subtitles": [],
+          "availableSince": 1688428554
+        },
+        {
+          "service": "prime",
+          "streamingType": "addon",
+          "quality": "sd",
+          "addon": "paramountplusca",
+          "link": "https://www.primevideo.com/detail/0J819P1SSRGM411IZOUD156G7Q/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "availableSince": 1689944868
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0J819P1SSRGM411IZOUD156G7Q/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "4.99",
+            "currency": "CAD",
+            "formatted": "4.99 CAD"
+          },
+          "availableSince": 1689944868
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0J819P1SSRGM411IZOUD156G7Q/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "4.99",
+            "currency": "CAD",
+            "formatted": "4.99 CAD"
+          },
+          "availableSince": 1689944868
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0J819P1SSRGM411IZOUD156G7Q/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "19.99",
+            "currency": "CAD",
+            "formatted": "19.99 CAD"
+          },
+          "availableSince": 1689944868
+        }
+      ],
+      "ch": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "de": [
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "1.0",
+            "currency": "EUR",
+            "formatted": "1.0 EUR"
+          },
+          "availableSince": 1690427021
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "1.0",
+            "currency": "EUR",
+            "formatted": "1.0 EUR"
+          },
+          "availableSince": 1690427021
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1690427021
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.amazon.de/gp/video/detail/B00ILNTTB4/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "deu",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1690427021
+        },
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "dk": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "es": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "2.99",
+            "currency": "EUR",
+            "formatted": "2.99 EUR"
+          },
+          "availableSince": 1690620199
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "8.99",
+            "currency": "EUR",
+            "formatted": "8.99 EUR"
+          },
+          "availableSince": 1690620199
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "8.99",
+            "currency": "EUR",
+            "formatted": "8.99 EUR"
+          },
+          "availableSince": 1690620199
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "2.99",
+            "currency": "EUR",
+            "formatted": "2.99 EUR"
+          },
+          "availableSince": 1690620199
+        }
+      ],
+      "fi": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "fr": [
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1691309417
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1691309417
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1691309417
+        },
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1691309417
+        }
+      ],
+      "gb": [
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.amazon.co.uk/gp/video/detail/B00V36DQRY/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "3.49",
+            "currency": "GBP",
+            "formatted": "3.49 GBP"
+          },
+          "availableSince": 1691164182
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.amazon.co.uk/gp/video/detail/B00V36DQRY/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "3.49",
+            "currency": "GBP",
+            "formatted": "3.49 GBP"
+          },
+          "availableSince": 1691164182
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.amazon.co.uk/gp/video/detail/B00V36DQRY/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "4.99",
+            "currency": "GBP",
+            "formatted": "4.99 GBP"
+          },
+          "availableSince": 1691164182
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.amazon.co.uk/gp/video/detail/B00V36DQRY/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "4.99",
+            "currency": "GBP",
+            "formatted": "4.99 GBP"
+          },
+          "availableSince": 1691164182
+        },
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1654325698
+        }
+      ],
+      "hk": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1652953198
+        }
+      ],
+      "ie": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1654325698
+        }
+      ],
+      "in": [
+        {
+          "service": "hotstar",
+          "streamingType": "subscription",
+          "link": "https://www.hotstar.com/in/movies/titanic/1770001166",
+          "videoLink": "https://www.hotstar.com/in/movies/titanic/1770001166/watch",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "availableSince": 1659626732
+        }
+      ],
+      "is": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1652953198
+        }
+      ],
+      "it": [
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "7.99",
+            "currency": "EUR",
+            "formatted": "7.99 EUR"
+          },
+          "availableSince": 1690395140
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "8.99",
+            "currency": "EUR",
+            "formatted": "8.99 EUR"
+          },
+          "availableSince": 1690395140
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1690395140
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1690395140
+        },
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "jp": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1652953198
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.amazon.co.jp/gp/video/detail/B00G9TNWGK/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "300",
+            "currency": "JPY",
+            "formatted": "300 JPY"
+          },
+          "availableSince": 1689858131
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.amazon.co.jp/gp/video/detail/B00G9TNWGK/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "300",
+            "currency": "JPY",
+            "formatted": "300 JPY"
+          },
+          "availableSince": 1689858131
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.amazon.co.jp/gp/video/detail/B00G9TNWGK/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "1.528",
+            "currency": "JPY",
+            "formatted": "1.528 JPY"
+          },
+          "availableSince": 1689858131
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.amazon.co.jp/gp/video/detail/B00G9TNWGK/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [],
+          "price": {
+            "amount": "1.19",
+            "currency": "JPY",
+            "formatted": "1.19 JPY"
+          },
+          "availableSince": 1689858131
+        }
+      ],
+      "kr": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1652953198
+        }
+      ],
+      "nl": [
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1690118327
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "EUR",
+            "formatted": "3.99 EUR"
+          },
+          "availableSince": 1690118327
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1690118327
+        },
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            }
+          ],
+          "price": {
+            "amount": "9.99",
+            "currency": "EUR",
+            "formatted": "9.99 EUR"
+          },
+          "availableSince": 1690118327
+        }
+      ],
+      "no": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "nz": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "pl": [
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "9.99",
+            "currency": "PLN",
+            "formatted": "9.99 PLN"
+          },
+          "availableSince": 1690316518
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "9.99",
+            "currency": "PLN",
+            "formatted": "9.99 PLN"
+          },
+          "availableSince": 1690316518
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "54.99",
+            "currency": "PLN",
+            "formatted": "54.99 PLN"
+          },
+          "availableSince": 1690316518
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.primevideo.com/detail/0PI02ZDBZ8T1HK11K9OHYK27R2/ref=atv_dp",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "49.99",
+            "currency": "PLN",
+            "formatted": "49.99 PLN"
+          },
+          "availableSince": 1690316518
+        }
+      ],
+      "pt": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "se": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1649600326
+        }
+      ],
+      "sg": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1652953198
+        }
+      ],
+      "tr": [
+        {
+          "service": "disney",
+          "streamingType": "subscription",
+          "quality": "hd",
+          "link": "https://www.disneyplus.com/movies/titanic/1vXLGiOUqEP9",
+          "videoLink": "https://www.disneyplus.com/video/70223d15-e3e4-4114-84c6-8a7d371cbcd2",
+          "audios": [
+            {
+              "language": "ces",
+              "region": ""
+            },
+            {
+              "language": "deu",
+              "region": ""
+            },
+            {
+              "language": "eng",
+              "region": ""
+            },
+            {
+              "language": "fra",
+              "region": "FRA"
+            },
+            {
+              "language": "hun",
+              "region": ""
+            },
+            {
+              "language": "ita",
+              "region": ""
+            },
+            {
+              "language": "jpn",
+              "region": ""
+            },
+            {
+              "language": "pol",
+              "region": ""
+            },
+            {
+              "language": "por",
+              "region": "BRA"
+            },
+            {
+              "language": "spa",
+              "region": "419"
+            },
+            {
+              "language": "spa",
+              "region": "ESP"
+            },
+            {
+              "language": "tur",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "ces",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "dan",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "deu",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ell",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fin",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "fra",
+                "region": "FRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "hun",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "isl",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ita",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "jpn",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "kor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nld",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "nor",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "pol",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "BRA"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "por",
+                "region": "PRT"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "ron",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "slk",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "419"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "spa",
+                "region": "ESP"
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "swe",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "tur",
+                "region": ""
+              },
+              "closedCaptions": false
+            },
+            {
+              "locale": {
+                "language": "zho",
+                "region": "HKG"
+              },
+              "closedCaptions": false
+            }
+          ],
+          "availableSince": 1655429834
+        }
+      ],
+      "us": [
+        {
+          "service": "prime",
+          "streamingType": "addon",
+          "quality": "sd",
+          "addon": "cbsaacf",
+          "link": "https://www.amazon.com/gp/video/detail/B008PHN6F6/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "availableSince": 1689609832
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "hd",
+          "link": "https://www.amazon.com/gp/video/detail/B008PHN6F6/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "16.99",
+            "currency": "USD",
+            "formatted": "16.99 USD"
+          },
+          "availableSince": 1689609832
+        },
+        {
+          "service": "prime",
+          "streamingType": "buy",
+          "quality": "sd",
+          "link": "https://www.amazon.com/gp/video/detail/B008PHN6F6/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "16.99",
+            "currency": "USD",
+            "formatted": "16.99 USD"
+          },
+          "availableSince": 1689609832
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "sd",
+          "link": "https://www.amazon.com/gp/video/detail/B008PHN6F6/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "USD",
+            "formatted": "3.99 USD"
+          },
+          "availableSince": 1689609832
+        },
+        {
+          "service": "prime",
+          "streamingType": "rent",
+          "quality": "hd",
+          "link": "https://www.amazon.com/gp/video/detail/B008PHN6F6/ref=atv_dp?language=en",
+          "audios": [
+            {
+              "language": "eng",
+              "region": ""
+            }
+          ],
+          "subtitles": [
+            {
+              "locale": {
+                "language": "eng",
+                "region": ""
+              },
+              "closedCaptions": true
+            }
+          ],
+          "price": {
+            "amount": "3.99",
+            "currency": "USD",
+            "formatted": "3.99 USD"
+          },
+          "availableSince": 1689609832
+        },
+        {
+          "service": "netflix",
+          "streamingType": "subscription",
+          "link": "https://www.netflix.com/title/1181461/",
+          "audios": [],
+          "subtitles": [],
+          "availableSince": 1688427573
+        }
+      ]
+    },
+    "year": 1997,
+    "imdbId": "tt0120338",
+    "tmdbId": 597,
+    "originalTitle": "Titanic",
+    "genres": [
+      {
+        "id": 18,
+        "name": "Drama"
+      },
+      {
+        "id": 10749,
+        "name": "Romance"
+      }
+    ],
+    "directors": [
+      "James Cameron"
+    ]
+  }
+}
+```
