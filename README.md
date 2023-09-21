@@ -7,7 +7,8 @@ We're a group of students coding our way through Carlton University's Coding Boo
     * index.html
     * about.html
     * with tailwindcss css framework
-2. search function __done by name (done date)__
+2. search function __doing by Jimmy (done date TBD)__
+    * movies.html
     * show search movie result, (new page? UI?)
     * use API [OMDB API](https://www.omdbapi.com/)
     * use Parameter `s` for search
