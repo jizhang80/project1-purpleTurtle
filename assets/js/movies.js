@@ -89,3 +89,10 @@ function movieCardClickHandler() {
 
 searchMovies(movieName);
 
+const tryAgainButton = document.getElementById("tryAgainButton");
+
+// Added a click event listener to the button
+tryAgainButton.addEventListener("click", function() {
+    // Redirect the user to index.html
+    window.location.href = "index.html";
+});
