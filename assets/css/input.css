@@ -6,16 +6,24 @@
 
 @layer components {
 
-    /* component sample define */
-    .btn-blue {
-        @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
+    .btn-current {
+        @apply bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium;
+    }
+
+    .btn-non-current {
+        @apply text-gray-700 hover:text-white hover:bg-gray-900 rounded-md px-3 py-2 text-sm font-medium ml-4
     }
 
     .movie-card {
-        @apply m-2 w-52 h-96 rounded;
+        @apply m-4 p-2 w-52 h-80 rounded cursor-pointer border-solid border-slate-300 items-center hover:border-2;
     }
 
     .card-img {
-        @apply w-52 h-80;
+        @apply w-44 h-60 rounded mx-auto;
+    }
+
+    .card-title,
+    .card-year {
+        @apply font-bold;
     }
   }
