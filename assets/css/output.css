@@ -768,6 +768,10 @@ select{
   font-weight: 700;
 }
 
+.fixed{
+  position: fixed;
+}
+
 .absolute{
   position: absolute;
 }
@@ -800,13 +804,8 @@ select{
   z-index: -10;
 }
 
-.m-20{
-  margin: 5rem;
-}
-
-.mx-auto{
-  margin-left: auto;
-  margin-right: auto;
+.z-10{
+  z-index: 10;
 }
 
 .mx-40{
@@ -814,14 +813,9 @@ select{
   margin-right: 10rem;
 }
 
-.mx-52{
-  margin-left: 13rem;
-  margin-right: 13rem;
-}
-
-.mx-44{
-  margin-left: 11rem;
-  margin-right: 11rem;
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .-ml-12{
@@ -872,6 +866,10 @@ select{
   height: 2.5rem;
 }
 
+.h-12{
+  height: 3rem;
+}
+
 .h-16{
   height: 4rem;
 }
@@ -892,8 +890,20 @@ select{
   height: 64rem;
 }
 
+.min-h-full{
+  min-height: 100%;
+}
+
+.w-12{
+  width: 3rem;
+}
+
 .w-4{
   width: 1rem;
+}
+
+.w-6{
+  width: 1.5rem;
 }
 
 .w-\[128rem\]{
@@ -906,6 +916,10 @@ select{
 
 .w-auto{
   width: auto;
+}
+
+.w-screen{
+  width: 100vw;
 }
 
 .max-w-2xl{
@@ -949,6 +963,10 @@ select{
   flex-wrap: wrap;
 }
 
+.items-end{
+  align-items: flex-end;
+}
+
 .items-center{
   align-items: center;
 }
@@ -978,8 +996,16 @@ select{
   overflow: visible;
 }
 
+.overflow-y-auto{
+  overflow-y: auto;
+}
+
 .rounded-full{
   border-radius: 9999px;
+}
+
+.rounded-lg{
+  border-radius: 0.5rem;
 }
 
 .rounded-xl{
@@ -991,14 +1017,28 @@ select{
   background-color: rgb(229 231 235 / var(--tw-bg-opacity));
 }
 
+.bg-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
+}
+
 .bg-gray-900{
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
 
+.bg-red-100{
+  --tw-bg-opacity: 1;
+  background-color: rgb(254 226 226 / var(--tw-bg-opacity));
+}
+
 .bg-white{
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-opacity-75{
+  --tw-bg-opacity: 0.75;
 }
 
 .fill-current{
@@ -1015,6 +1055,10 @@ select{
 
 .p-12{
   padding: 3rem;
+}
+
+.p-4{
+  padding: 1rem;
 }
 
 .px-2{
@@ -1042,8 +1086,24 @@ select{
   padding-bottom: 6rem;
 }
 
+.pb-4{
+  padding-bottom: 1rem;
+}
+
 .pr-10{
   padding-right: 2.5rem;
+}
+
+.pt-5{
+  padding-top: 1.25rem;
+}
+
+.text-left{
+  text-align: left;
+}
+
+.text-center{
+  text-align: center;
 }
 
 .text-3xl{
@@ -1070,6 +1130,14 @@ select{
   font-weight: 700;
 }
 
+.font-semibold{
+  font-weight: 600;
+}
+
+.leading-6{
+  line-height: 1.5rem;
+}
+
 .leading-7{
   line-height: 1.75rem;
 }
@@ -1080,6 +1148,11 @@ select{
 
 .tracking-tight{
   letter-spacing: -0.025em;
+}
+
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 
 .text-gray-600{
@@ -1095,6 +1168,11 @@ select{
 .text-gray-900{
   --tw-text-opacity: 1;
   color: rgb(17 24 39 / var(--tw-text-opacity));
+}
+
+.text-red-600{
+  --tw-text-opacity: 1;
+  color: rgb(220 38 38 / var(--tw-text-opacity));
 }
 
 .shadow-xl{
@@ -1113,6 +1191,18 @@ select{
   --tw-ring-color: rgb(156 163 175 / 0.1);
 }
 
+.transition-all{
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-opacity{
+  transition-property: opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .\[mask-image\:radial-gradient\(64rem_64rem_at_top\2c white\2c transparent\)\]{
   -webkit-mask-image: radial-gradient(64rem 64rem at top,white,transparent);
           mask-image: radial-gradient(64rem 64rem at top,white,transparent);
@@ -1124,16 +1214,70 @@ select{
 }
 
 @media (min-width: 640px){
+  .sm\:mx-0{
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .sm\:my-8{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .sm\:ml-4{
+    margin-left: 1rem;
+  }
+
   .sm\:ml-6{
     margin-left: 1.5rem;
+  }
+
+  .sm\:mt-0{
+    margin-top: 0px;
   }
 
   .sm\:block{
     display: block;
   }
 
+  .sm\:flex{
+    display: flex;
+  }
+
+  .sm\:h-10{
+    height: 2.5rem;
+  }
+
+  .sm\:w-10{
+    width: 2.5rem;
+  }
+
   .sm\:w-\[57rem\]{
     width: 57rem;
+  }
+
+  .sm\:w-full{
+    width: 100%;
+  }
+
+  .sm\:max-w-lg{
+    max-width: 32rem;
+  }
+
+  .sm\:items-start{
+    align-items: flex-start;
+  }
+
+  .sm\:items-center{
+    align-items: center;
+  }
+
+  .sm\:p-0{
+    padding: 0px;
+  }
+
+  .sm\:p-6{
+    padding: 1.5rem;
   }
 
   .sm\:px-6{
@@ -1144,6 +1288,14 @@ select{
   .sm\:py-32{
     padding-top: 8rem;
     padding-bottom: 8rem;
+  }
+
+  .sm\:pb-4{
+    padding-bottom: 1rem;
+  }
+
+  .sm\:text-left{
+    text-align: left;
   }
 
   .sm\:text-4xl{
