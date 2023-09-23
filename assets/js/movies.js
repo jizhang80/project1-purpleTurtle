@@ -51,16 +51,19 @@ function createCard(movie) {
 }
 // edited so that both search bars now search 
 function searchMovies(movieName) {
+    // Hide the modal before making the API request
+    const noResultsModal = document.getElementById("noResultsModal");
+    noResultsModal.style.display = "none";
+    
     // Search
     fetch(OMDB_SEARCH_API_URL + movieName)
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            // Get the "No Search Results" modal
-            const noResultsModal = document.getElementById("noResultsModal");
+            const moviesDiv = document.getElementById('movies');
+            moviesDiv.innerHTML = "";
+            
             if (data.Response === 'True') {
-                const moviesDiv = document.getElementById('movies');
-                moviesDiv.innerHTML = "";
                 for (let movie of data.Search) {
                     moviesDiv.appendChild(createCard(movie));
                 }
@@ -70,7 +73,6 @@ function searchMovies(movieName) {
                 }
             } else {
                 // No movie found, display the "No Search Results" modal
-                console.log("noResultsModal:", noResultsModal);
                 noResultsModal.style.display = "block";
                 // Log the error
                 console.log(data.Response, data.Error);
@@ -86,6 +88,13 @@ function movieCardClickHandler() {
     const link = `movieDetail.html?imdbid=${this.dataset.imdbid}&country=${country}`;
     window.location.href = link;
 }
+const tryAgainButton = document.getElementById("tryAgainButton");
+
+// Added a click event listener to the button
+tryAgainButton.addEventListener("click", function() {
+    // Redirect the user to index.html
+    window.location.href = "index.html";
+});
 
 searchMovies(movieName);
 
