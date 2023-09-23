@@ -1,3 +1,4 @@
+
 //get parameters from url
 const queryStr = window.location.search;
 console.log(queryStr);
@@ -50,35 +51,35 @@ function createCard(movie) {
 }
 // edited so that both search bars now search 
 function searchMovies(movieName) {
-    // search
+    // Search
     fetch(OMDB_SEARCH_API_URL + movieName)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
-            // If search result is empty
+            console.log(data);
+            // Get the "No Search Results" modal
+            const noResultsModal = document.getElementById("noResultsModal");
             if (data.Response === 'True') {
                 const moviesDiv = document.getElementById('movies');
-                // Clear previous search results
-                moviesDiv.innerHTML = "";   
-                // Append search results to moviesDiv
+                moviesDiv.innerHTML = "";
                 for (let movie of data.Search) {
                     moviesDiv.appendChild(createCard(movie));
-                }   
-                //add click event listener for all the movie cards div
+                }
                 const movieDivs = document.getElementsByClassName('movie-card');
                 for (let m of movieDivs) {
                     m.addEventListener('click', movieCardClickHandler);
                 }
             } else {
-                // no movie found, modal here
-                console.log(data.Response, data.Error)
+                // No movie found, display the "No Search Results" modal
+                console.log("noResultsModal:", noResultsModal);
+                noResultsModal.style.display = "block";
+                // Log the error
+                console.log(data.Response, data.Error);
             }
-            })
+        })
         .catch(error => {
             console.error('Error', error);
         });
-    }
-
+}
 function movieCardClickHandler() {
     console.log(this.dataset.imdbid);
     // waiting for anthony's function
