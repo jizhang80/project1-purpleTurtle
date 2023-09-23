@@ -35,7 +35,7 @@ function createCard(movie) {
 
     const year = document.createElement('h3');
     year.className = 'card-year';
-    year.innerHTML = movie.Year;
+    year.innerHTML = `Release Year: ${movie.Year}`;
 
     movieCardDiv.appendChild(img);
     movieCardDiv.appendChild(title);

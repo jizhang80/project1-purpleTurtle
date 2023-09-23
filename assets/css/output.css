@@ -824,6 +824,31 @@ select{
   margin-right: 11rem;
 }
 
+.-mx-48{
+  margin-left: -12rem;
+  margin-right: -12rem;
+}
+
+.mx-48{
+  margin-left: 12rem;
+  margin-right: 12rem;
+}
+
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
+.mx-2{
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+}
+
 .-ml-12{
   margin-left: -3rem;
 }
@@ -941,6 +966,14 @@ select{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
+.grid-cols-5{
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-3{
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
 .flex-row{
   flex-direction: row;
 }
@@ -959,6 +992,14 @@ select{
 
 .justify-between{
   justify-content: space-between;
+}
+
+.gap-4{
+  gap: 1rem;
+}
+
+.gap-2{
+  gap: 0.5rem;
 }
 
 .gap-x-8{
@@ -1124,6 +1165,11 @@ select{
 }
 
 @media (min-width: 640px){
+  .sm\:mx-2{
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
   .sm\:ml-6{
     margin-left: 1.5rem;
   }
@@ -1132,8 +1178,16 @@ select{
     display: block;
   }
 
+  .sm\:grid{
+    display: grid;
+  }
+
   .sm\:w-\[57rem\]{
     width: 57rem;
+  }
+
+  .sm\:grid-cols-1{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 
   .sm\:px-6{
@@ -1149,6 +1203,26 @@ select{
   .sm\:text-4xl{
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:mx-24{
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+
+  .md\:mx-10{
+    margin-left: 2.5rem;
+    margin-right: 2.5rem;
+  }
+
+  .md\:grid{
+    display: grid;
+  }
+
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -1195,6 +1269,21 @@ select{
     margin-right: auto;
   }
 
+  .lg\:mx-48{
+    margin-left: 12rem;
+    margin-right: 12rem;
+  }
+
+  .lg\:mx-20{
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+
+  .lg\:mx-14{
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
   .lg\:grid{
     display: grid;
   }
@@ -1217,6 +1306,10 @@ select{
 
   .lg\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .lg\:grid-cols-5{
+    grid-template-columns: repeat(5, minmax(0, 1fr));
   }
 
   .lg\:items-start{
