@@ -15,7 +15,7 @@ const country = urlParams.get('country');
 
 // IMDB API URL
 const OMDB_API_KEY = '1df79541'
-const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=`
+const OMDB_SEARCH_API_URL = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=`
 const XRapidAPIKey = '1820ec5d27mshbb8bd32f6d6558ep1124f3jsn8bae737b8b70';
 const STREAM_URL = `https://streaming-availability.p.rapidapi.com/get?output_language=en&imdb_id=${imdbid}`
 

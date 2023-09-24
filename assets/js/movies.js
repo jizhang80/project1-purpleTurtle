@@ -8,7 +8,7 @@ const country = urlParams.get('country');
 
 // define const variable
 const OMDB_API_KEY = '1df79541'
-const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&type=movie&s=`
+const OMDB_SEARCH_API_URL = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&type=movie&s=`
 
 /*
  define the object for search movies
