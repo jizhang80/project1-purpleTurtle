@@ -34,4 +34,27 @@
     .modal {
         @apply hidden fixed z-10 left-0 top-0 w-full h-full bg-black opacity-70;
     }
+
+    .movie-detail {
+        @apply flex flex-row flex-wrap m-10;
+    }
+    .movie-title {
+        @apply text-center text-3xl mt-10;
+    }
+
+    .movie-info {
+        @apply text-xl my-4;
+    }
+
+    .movie-image {
+        @apply mt-20 m-10 rounded border-spacing-1;
+    }
+
+    .stream-brand {
+        @apply w-14 h-14 m-2;
+    }
+
+    .link-disabled {
+        @apply cursor-not-allowed pointer-events-none;
+    }
   }
