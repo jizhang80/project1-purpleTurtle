@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="assets/css/output.css" />
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <title>purple turtle</title>
 
 </head>
@@ -31,19 +30,28 @@
         </div>
     </nav>
     <main>
-        <div id="movie-detail">
-            <h1 ><b>Movie Title:</b> <span id ="mname">  </span></h1>
-            <lable><b>Yesr:</b><span id="myear"></span> <span id="mrating"></span></lable>
-            <div>
-                <img img class="mimage" src="" alt="Movie Poster" >
-                <label ><b>Director</b> <span id = "mdirector"></span></label>
-                <label><b>Type:</b> <span id="mtype"></span></label>
-                <label><b>PG-</b> <span id="gptype"></span></label>
+        <div id="movie-detail" class="movie-detail">
+            <div class="left-movie-detail">
+                <img id="poster" class="movie-image" src="" alt="Movie Poster" >
             </div>
-            
-            <div id="mvStrminfo">
-                <h3> <b>Streaming Info</b> </h3>
-
+            <div class="right-movie-detail">
+                <h1 class="movie-title" id="mname"></h1>
+                <div class="movie-info"><label class="font-bold">Realeased Yesr: </label><span id="myear"></span></div>
+                <div class="movie-info"><label class="font-bold">Director: </label><span id = "mdirector"></span></div>
+                <div class="movie-info"><label class="font-bold">Movie Type: </label><span id="mtype"></span></div>
+                <div class="movie-info"><label>PG-</label><span id="gptype"></span></div>
+                
+                <div id="mvStrminfo" class="m-20 mt-20">
+                    <h2 class="text-2xl font-bold m-10">Streaming Now:</h2>
+                    <div class="flex flex-row flex-wrap">
+                        <a class="stream-link link-disabled" href="https://tv.apple.com/"><img id="apple" class="stream-brand opacity-30" src="./assets/images/appleTV.png" /></a>
+                        <a class="stream-link link-disabled" href="https://www.crave.ca/"><img id="crave" class="stream-brand opacity-30" src="./assets/images/crave.png" /></a>
+                        <a class="stream-link link-disabled" href="https://www.disneyplus.com/"><img id="disney" class="stream-brand opacity-30" src="./assets/images/disneyPlus.png" /></a>
+                        <a class="stream-link link-disabled" href="https://www.netflix.com/"><img id="netflex" class="stream-brand opacity-30" src="./assets/images/netflix.png" /></a>
+                        <a class="stream-link link-disabled" href="https://www.paramountplus.com/"><img id="paramount" class="stream-brand opacity-30" src="./assets/images/paramount.png" /></a>
+                        <a class="stream-link link-disabled" href="https://www.primevideo.com/"><img id="prime" class="stream-brand opacity-30" src="./assets/images/primeVedio.png" /></a>
+                    </div>
+                </div>
             </div>
         </div><!--end of movie-detail-->
                     </div>

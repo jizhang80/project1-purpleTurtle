@@ -14,6 +14,10 @@
         @apply text-gray-700 hover:text-white hover:bg-gray-900 rounded-md px-3 py-2 text-sm font-medium ml-4
     }
 
+    .searchHistory {
+        @apply bg-gray-200 hover:bg-gray-300 rounded-full text-sm h-8 px-2 mx-1 text-center
+    }
+
     .movie-card {
         @apply m-4 p-2 w-52 h-80 rounded cursor-pointer border-solid border-slate-300 items-center hover:border-2;
     }
@@ -25,5 +29,32 @@
     .card-title,
     .card-year {
         @apply font-bold;
+    }
+
+    .modal {
+        @apply hidden fixed z-10 left-0 top-0 w-full h-full bg-black opacity-70;
+    }
+
+    .movie-detail {
+        @apply flex flex-row flex-wrap m-10;
+    }
+    .movie-title {
+        @apply text-center text-3xl mt-10;
+    }
+
+    .movie-info {
+        @apply text-xl my-4;
+    }
+
+    .movie-image {
+        @apply mt-20 m-10 rounded border-spacing-1;
+    }
+
+    .stream-brand {
+        @apply w-14 h-14 m-2;
+    }
+
+    .link-disabled {
+        @apply cursor-not-allowed pointer-events-none;
     }
   }

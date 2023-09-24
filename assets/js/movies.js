@@ -8,7 +8,7 @@ const country = urlParams.get('country');
 
 // define const variable
 const OMDB_API_KEY = '1df79541'
-const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=`
+const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&type=movie&s=`
 
 /*
  define the object for search movies
@@ -36,7 +36,7 @@ function createCard(movie) {
 
     const year = document.createElement('h3');
     year.className = 'card-year';
-    year.innerHTML = movie.Year;
+    year.innerHTML = `Release Year: ${movie.Year}`;
 
     movieCardDiv.appendChild(img);
     movieCardDiv.appendChild(title);
@@ -60,10 +60,11 @@ function searchMovies(movieName) {
         .then(response => response.json())
         .then(data => {
             console.log(data);
-            const moviesDiv = document.getElementById('movies');
-            moviesDiv.innerHTML = "";
-            
+            // Get the "No Search Results" modal
+            const noResultsModal = document.getElementById("noResultsModal");
             if (data.Response === 'True') {
+                const moviesDiv = document.getElementById('movies');
+                moviesDiv.innerHTML = "";
                 for (let movie of data.Search) {
                     moviesDiv.appendChild(createCard(movie));
                 }
@@ -72,8 +73,12 @@ function searchMovies(movieName) {
                     m.addEventListener('click', movieCardClickHandler);
                 }
             } else {
+                // Get the "No Search Results" modal
+                const noResultsModal = document.getElementById("noResultsModal");
                 // No movie found, display the "No Search Results" modal
                 noResultsModal.style.display = "block";
+                const footer = document.getElementById('footer');
+                footer.className = 'hidden';
                 // Log the error
                 console.log(data.Response, data.Error);
             }
@@ -84,7 +89,6 @@ function searchMovies(movieName) {
 }
 function movieCardClickHandler() {
     console.log(this.dataset.imdbid);
-    // waiting for anthony's function
     const link = `movieDetail.html?imdbid=${this.dataset.imdbid}&country=${country}`;
     window.location.href = link;
 }
