@@ -738,6 +738,25 @@ select{
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.searchHistory{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  height: 2rem;
+  border-radius: 9999px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(229 231 235 / var(--tw-bg-opacity));
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+
+.searchHistory:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(209 213 219 / var(--tw-bg-opacity));
+}
+
 .movie-card{
   margin: 1rem;
   height: 20rem;
@@ -766,6 +785,19 @@ select{
 .card-title,
     .card-year{
   font-weight: 700;
+}
+
+.modal{
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  z-index: 10;
+  display: none;
+  height: 100%;
+  width: 100%;
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+  opacity: 0.7;
 }
 
 .fixed{
@@ -808,9 +840,13 @@ select{
   z-index: 10;
 }
 
-.mx-40{
-  margin-left: 10rem;
-  margin-right: 10rem;
+.m-1{
+  margin: 0.25rem;
+}
+
+.mx-1{
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
 }
 
 .mx-auto{
@@ -818,9 +854,9 @@ select{
   margin-right: auto;
 }
 
-.mx-1{
-  margin-left: 0.25rem;
-  margin-right: 0.25rem;
+.my-4{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .-ml-12{
@@ -1362,14 +1398,14 @@ select{
     margin-right: 0px;
   }
 
-  .lg\:mx-auto{
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .lg\:mx-14{
     margin-left: 3.5rem;
     margin-right: 3.5rem;
+  }
+
+  .lg\:mx-auto{
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .lg\:grid{

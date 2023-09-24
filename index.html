@@ -66,9 +66,9 @@
                     <div class="lg:pr-4">
                         <div class="lg:max-w-lg">
                             <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Find Your
-                                Movie or TV Show!</h1>
+                                Movie!</h1>
                             <p class="mt-6 text-xl leading-8 text-gray-700">Stop searching each individual Streaming
-                                Service to find the movie or show you're looking for!</p>
+                                Service to find the movie you're looking for!</p>
                         </div>
                     </div>
                 </div>
@@ -82,14 +82,15 @@
                     <div class="lg:pr-4">
                         <div class="max-w-xl text-base leading-7 text-gray-700 lg:max-w-lg">
                             <p>Here at purple turtle we want to provide you with all the info you need on where to stream your
-                                favourite movies and TV Shows! While also providing you with details about the movie/tv to make sure you
+                                favourite movies! While also providing you with details about the movie to make sure you
                                 make the right choice for your viewing pleasure!
                             </p>
                             <!-- Adjusted margin-top for the search bar -->
-                            <div class="max-w-xl mx-auto text-base leading-7 text-gray-700" style="margin-top: 50px;">
+                            <div class="max-w-xl mx-auto text-base leading-7 text-gray-700" style="margin-top: 10px;">
                                 <div class="relative text-gray-600 mb-6">
                                     <input id="search-input2" type="search" name="search" placeholder="Search"
                                         class="bg-gray-200 h-10 px-5 pr-10 rounded-full text-sm focus:outline-none">
+                                    <div id="search-history" class="h-12 m-1 my-4"></div>
                                     <button id='search-btn' type="submit" class="absolute right-0 top-0 mt-3 mr-4">
                                         <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
                                             viewBox="0 0 24 24">
@@ -99,11 +100,12 @@
                                 </div>
                             </div>
                             <div class="relative mb-6">
+                                
                                 <label for="country" class="block text-gray-700 font-bold">Select Country:</label>
                                 <select id="country" name="country"
                                     class="bg-gray-200 h-10 px-4 rounded-full text-sm focus:outline-none">
-                                    <option value="us">United States</option>
                                     <option value="ca">Canada</option>
+                                    <option value="us">United States</option>
                                 </select>
                             </div>
                         </div>
@@ -122,7 +124,7 @@
 <footer class="bg-white-800 h-16 flex items-center justify-center">
     <img class="h-6 w-auto" src="\assets\images\Screenshot 2023-09-19 185205.png" alt="purple turtle logo">
 </footer>
-
+<script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
 <script src="./assets/js/script.js"></script>
 </body>
 

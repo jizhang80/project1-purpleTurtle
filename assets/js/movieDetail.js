@@ -1,4 +1,4 @@
-
+// import data from '../../streaming.json' assert { type: 'json' };
 //get movie info from url parameters
 const queryStr = window.location.search;
 console.log(queryStr);

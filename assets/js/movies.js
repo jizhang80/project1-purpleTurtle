@@ -8,7 +8,7 @@ const country = urlParams.get('country');
 
 // define const variable
 const OMDB_API_KEY = '1df79541'
-const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=`
+const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&type=movie&s=`
 
 /*
  define the object for search movies
@@ -55,9 +55,6 @@ function searchMovies(movieName) {
     fetch(OMDB_SEARCH_API_URL + movieName)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            // Get the "No Search Results" modal
-            const noResultsModal = document.getElementById("noResultsModal");
             if (data.Response === 'True') {
                 const moviesDiv = document.getElementById('movies');
                 moviesDiv.innerHTML = "";
@@ -69,9 +66,13 @@ function searchMovies(movieName) {
                     m.addEventListener('click', movieCardClickHandler);
                 }
             } else {
+                // Get the "No Search Results" modal
+                const noResultsModal = document.getElementById("noResultsModal");
                 // No movie found, display the "No Search Results" modal
                 console.log("noResultsModal:", noResultsModal);
                 noResultsModal.style.display = "block";
+                const footer = document.getElementById('footer');
+                footer.className = 'hidden';
                 // Log the error
                 console.log(data.Response, data.Error);
             }
@@ -82,7 +83,6 @@ function searchMovies(movieName) {
 }
 function movieCardClickHandler() {
     console.log(this.dataset.imdbid);
-    // waiting for anthony's function
     const link = `movieDetail.html?imdbid=${this.dataset.imdbid}&country=${country}`;
     window.location.href = link;
 }
