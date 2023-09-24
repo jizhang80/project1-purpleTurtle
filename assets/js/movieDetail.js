@@ -1,5 +1,12 @@
 import data from '../../streaming.json' assert { type: 'json' };
 
+var mvName = document.querySelector("#mname");
+var mvYear = document.querySelector("#myear");
+var  mvType = document.querySelector("#mtype");
+var mvDirector = document.querySelector("#mdirector")
+var mvStrinfo = document.querySelector("#mvStrminfo")
+var mvPG = document.querySelector("#gptype")
+
 
 //get movie info from url parameters
 const queryStr = window.location.search;
@@ -20,13 +27,15 @@ const OMDB_API_KEY = '1df79541'
 const OMDB_SEARCH_API_URL = `http://www.omdbapi.com/?apikey=${OMDB_API_KEY}&s=`
 
 
-
+var streamInfo = [];
 
 function streamData (imdbid) {
 
-    var imid = imdbid;
+    streamInfo.length = 0;
 
-    const url = `https://streaming-availability.p.rapidapi.com/get?output_language=en&imdb_id=${imid}`;
+    // var imid = imdbid;
+
+    const url = `https://streaming-availability.p.rapidapi.com/get?output_language=en&imdb_id=${imdbid}`;
     const options = {
            method: 'GET',
            headers: {
@@ -57,25 +66,28 @@ function streamData (imdbid) {
 
 var mTitle
 
-//To fillet the data in to etract the movie details 
+//To fill the data from stream API  in to the DOM - movie details 
 function filterdata(data) {
-    console.log(data);
-
+    // console.log(data);
     var filteredArray = data;
-
-    var mDirector = filteredArray.result.directors;
+    var mDirector = filteredArray.result.directors[0];
     mTitle = filteredArray.result.originalTitle;
     var mType = filteredArray.result.genres;
     var mYear = filteredArray.result.year;
     var mStreaming = filteredArray.result.streamingInfo
  
-
-    // console.log(mDirector[0]); 
+    // console.log(mDirector)
     // console.log(mTitle); 
     // console.log(mType[0]); 
     // console.log(mYear); 
-    // console.log(mStreaming); 
+    //  console.log(mStreaming); 
 
+    mvDirector.textContent = mDirector;
+    mvName.textContent = mTitle;
+    mvYear.textContent = mYear;
+    mvType.textContent = mType[0].name;
+    mvPG.textContent = mType[0].id;
+    
     streaming (mStreaming);
     getimage (mTitle);
 
@@ -86,26 +98,51 @@ function streaming (array, country) {
  var streamingData = array; 
  var stCountry = country;  
 
- stCountry = 'ca'
+ stCountry = 'ca' //Erase this
+
  var stprovider = streamingData[stCountry];
- var streamInfo = [];
+ 
 
 for (var i=0; i < stprovider.length; i++ ) {
     
-    streamInfo.push(stprovider[i].service, stprovider[i].quality);
+    streamInfo.push(stprovider[i].service);
 
 }
 
 
+const mvStreamfinal = streamInfo.filter((value, index, self) => self.indexOf(value) === index);
+
 //  console.log(stprovider)
-//  console.log(streamInfo)
+// console.log(mvStreamfinal)
 
+// const prime = "./assets/images/Prime.png"
+ 
 
+const stList = document.createElement('ul')
+
+mvStreamfinal.forEach(function(stText) {
+    
+    // const imgElement = document.createElement('img');
+    
+    // if (stText === 'prime') {
+    //     imgElement.src = './assets/'
+    //     imgElement.atl = 'Image Prime'
+    //     stList.appendChild(imgElement);
+    //     console.log("image")
+    // }
+    const stlistItem = document.createElement('li');
+    stlistItem.textContent = stText;
+    stList.appendChild(stlistItem);
+
+});
+
+mvStrinfo.appendChild(stList);
+// streamInfo.length = 0;
 }
 
 //To get the image from the IMDB
 function getimage (mTitle) {
-    console.log(mTitle)
+    // console.log(mTitle)
     fetch(OMDB_SEARCH_API_URL + mTitle)
         .then(function (response) {
           return response.json();
@@ -113,10 +150,8 @@ function getimage (mTitle) {
         .then(function (data) {
              
            var imdbArray = data;
-        //   var callDetails = data;
-            console.log(imdbArray);
-         // filterdata(data);
-
+        //    console.log(imdbArray);
+         
          imageData(imdbArray)
     
     });
@@ -127,7 +162,7 @@ function getimage (mTitle) {
         var movieImageUrl
         var imdbid = 'tt0120338' //Erase this
 
-        console.log(tempArray)
+        // console.log(tempArray)
 
         // console.log(tempArray[0].Poster)
 
@@ -137,20 +172,18 @@ function getimage (mTitle) {
 
                  movieImageUrl = tempArray[x].Poster
             }
-
             // console.log(tempArray[x].imdbID)
             // console.log(tempArray.Poster)
-
         }
+        
+        document.querySelector(".mimage").src = movieImageUrl
 
-        console.log(movieImageUrl)
+        // console.log(movieImageUrl)
 
     }
 
  }
 
-
- 
 streamData ();
 getimage ()  
 filterdata(data); 
