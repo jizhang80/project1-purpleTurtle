@@ -57,7 +57,7 @@ function streamData (imdbid) {
 
 var mTitle
 
-
+//To fillet the data in to etract the movie details 
 function filterdata(data) {
     console.log(data);
 
@@ -70,11 +70,11 @@ function filterdata(data) {
     var mStreaming = filteredArray.result.streamingInfo
  
 
-    console.log(mDirector[0]); 
-    console.log(mTitle); 
-    console.log(mType[0]); 
-    console.log(mYear); 
-    console.log(mStreaming); 
+    // console.log(mDirector[0]); 
+    // console.log(mTitle); 
+    // console.log(mType[0]); 
+    // console.log(mYear); 
+    // console.log(mStreaming); 
 
     streaming (mStreaming);
     getimage (mTitle);
@@ -103,7 +103,7 @@ for (var i=0; i < stprovider.length; i++ ) {
 
 }
 
-// console.log(mTitle)
+//To get the image from the IMDB
 function getimage (mTitle) {
     console.log(mTitle)
     fetch(OMDB_SEARCH_API_URL + mTitle)
