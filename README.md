@@ -22,14 +22,14 @@ SO THAT I can find my movie without searching the copious amount of streaming se
     * index.html
     * about.html
     * with tailwindcss css framework
-2. Search function __doing by Jimmy (done date TBD)__
+2. Search function __done by Jimmy (2023-09-22)__
     * movies.html
     * show search movie result, (new page? UI?)
     * use API [OMDB API](https://www.omdbapi.com/)
     * use Parameter `s` for search
     * response data should be a movie list
     * [API call sample](./OMDBAPI.md)
-3. User select one of the movie results list, show the movie detail __done by name (done date)__
+3. User select one of the movie results list, show the movie detail __done by Anthony (2023-09-24)__
     * movie name, year, IMDB score, (new page? anything else?)
     * show stream information from API [Streaming Availability](https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability)
     * [API call sample](./StreamingAvailability.md)
