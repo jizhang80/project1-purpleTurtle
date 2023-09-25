@@ -51,7 +51,7 @@
     }
 
     .stream-brand {
-        @apply w-14 h-14 m-2;
+        @apply w-14 h-14 m-2 border-solid border-2 border-slate-300;
     }
 
     .link-disabled {

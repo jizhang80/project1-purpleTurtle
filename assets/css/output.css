@@ -832,6 +832,10 @@ select {
   margin: 0.5rem;
   height: 3.5rem;
   width: 3.5rem;
+  border-width: 2px;
+  border-style: solid;
+  --tw-border-opacity: 1;
+  border-color: rgb(203 213 225 / var(--tw-border-opacity));
 }
 
 .link-disabled {
