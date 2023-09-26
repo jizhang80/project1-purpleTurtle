@@ -40,7 +40,6 @@ function streamData(imdbid) {
 
 //To fill the data from stream API  in to the DOM - movie details 
 function filterdata(data) {
-    console.log(data);
     let mDirector = data.result.directors; // return array, need list all the director
     let mTitle = data.result.originalTitle;
     let mType = data.result.genres;
@@ -91,7 +90,6 @@ function setBrand(elementId) {
 
 //To get the image from the IMDB
 function showImage (imdbid) {
-    console.log(imdbid)
     fetch(OMDB_SEARCH_API_URL + imdbid)
         .then(response=>response.json())
         .then(data=>{

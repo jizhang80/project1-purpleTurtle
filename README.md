@@ -24,17 +24,18 @@ SO THAT I can find my movie without searching the copious amount of streaming se
     * with tailwindcss css framework
 2. Search function __done by Jimmy (2023-09-22)__
     * movies.html
-    * show search movie result, (new page? UI?)
+    * show search movie result in a new page.
     * use API [OMDB API](https://www.omdbapi.com/)
     * use Parameter `s` for search
     * response data should be a movie list
     * [API call sample](./OMDBAPI.md)
 3. User select one of the movie results list, show the movie detail __done by Anthony (2023-09-24)__
-    * movie name, year, IMDB score, (new page? anything else?)
+    * movie name, year, IMDB score, show in a new page.
     * show stream information from API [Streaming Availability](https://rapidapi.com/movie-of-the-night-movie-of-the-night-default/api/streaming-availability)
     * [API call sample](./StreamingAvailability.md)
 4. Presentation __done by all (before 2023-09-25 Monday)__
-5. Stretch Goals (TBD)
+5. Stretch Goals 
+    * In the future, we have chance to do more with more data - more movie detail information, more streaming brand (total 20+).
 
 ## Deployed URL
 
