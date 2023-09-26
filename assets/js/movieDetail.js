@@ -17,6 +17,8 @@ const country = urlParams.get('country');
 const OMDB_API_KEY = '1df79541'
 const OMDB_SEARCH_API_URL = `https://www.omdbapi.com/?apikey=${OMDB_API_KEY}&i=`
 const XRapidAPIKey = '1820ec5d27mshbb8bd32f6d6558ep1124f3jsn8bae737b8b70';
+const XRapidAPIKey1 = 'de5600b761mshd6c596360882e70p169510jsnd0be1294ce65';
+const XRapidAPIKey2 = '48c008f518msh3634cbf6badb95dp117425jsn94e94c124522';
 const STREAM_URL = `https://streaming-availability.p.rapidapi.com/get?output_language=en&imdb_id=${imdbid}`
 
 function streamData(imdbid) {
@@ -38,7 +40,7 @@ function streamData(imdbid) {
 
 //To fill the data from stream API  in to the DOM - movie details 
 function filterdata(data) {
-    // console.log(data);
+    console.log(data);
     let mDirector = data.result.directors; // return array, need list all the director
     let mTitle = data.result.originalTitle;
     let mType = data.result.genres;
@@ -48,12 +50,21 @@ function filterdata(data) {
     mvDirector.textContent = mDirector.toString();//need list all the director from array
     mvName.textContent = mTitle;
     mvYear.textContent = mYear;
-    mvType.textContent = mType[0].name;
-    mvPG.textContent = mType[0].id;
 
-    if (streamingInfo[country].length === 0) {
+    let typeName = ''
+    mType.forEach((item)=>{
+        typeName += ' ' + item.name;
+    })
+    mvType.textContent = typeName;
+
+    if (!streamingInfo[country] || (streamingInfo[country].length === 0)) {
         // no avilable streaming info in this country
-    }; 
+        const noResultsModal = document.getElementById("noResultsModal");
+        // No movie found, display the "No Search Results" modal
+        noResultsModal.style.display = "block";
+        const footer = document.getElementById('footer');
+        footer.className = 'hidden';
+    }
     let serviceBrand = [];
     for (let serviceInfo of streamingInfo[country]) {
         // get all the streaming brand

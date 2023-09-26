@@ -1,7 +1,6 @@
 
 //get parameters from url
 const queryStr = window.location.search;
-console.log(queryStr);
 const urlParams = new URLSearchParams(queryStr);
 const movieName = urlParams.get('movie');
 const country = urlParams.get('country');
@@ -59,7 +58,6 @@ function searchMovies(movieName) {
     fetch(OMDB_SEARCH_API_URL + movieName)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             // Get the "No Search Results" modal
             const noResultsModal = document.getElementById("noResultsModal");
             if (data.Response === 'True') {
@@ -80,7 +78,7 @@ function searchMovies(movieName) {
                 const footer = document.getElementById('footer');
                 footer.className = 'hidden';
                 // Log the error
-                console.log(data.Response, data.Error);
+                //console.log(data.Response, data.Error);
             }
         })
         .catch(error => {
@@ -88,7 +86,6 @@ function searchMovies(movieName) {
         });
 }
 function movieCardClickHandler() {
-    console.log(this.dataset.imdbid);
     const link = `movieDetail.html?imdbid=${this.dataset.imdbid}&country=${country}`;
     window.location.href = link;
 }
