@@ -63,8 +63,8 @@ function filterdata(data) {
         noResultsModal.style.display = "block";
         const footer = document.getElementById('footer');
         footer.className = 'hidden';
-        const movieDetails = document.getElementById('movie-details');
-        movieDetails.className = 'hidden';
+        const movieDetail = document.getElementById('movie-detail');
+        movieDetail.className = 'hidden';
     }
     let serviceBrand = [];
     for (let serviceInfo of streamingInfo[country]) {
